@@ -6,3 +6,9 @@ use_frameworks!
 pod 'XLForm'
 pod 'ScalePicker'
 
+target 'ScalePickerDemo' do
+  inherit! :search_paths
+  # Pods for testing
+  pod 'XLForm'
+  pod 'ScalePicker'
+end

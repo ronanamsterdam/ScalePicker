@@ -273,8 +273,8 @@ open class ScalePicker: UIView, SlidePickerDelegate {
     }
 
     open var valueFormatter: ValueFormatter = {(value: CGFloat) -> NSAttributedString in
-        let attrs = [NSForegroundColorAttributeName: UIColor.white,
-                     NSFontAttributeName: UIFont.systemFont(ofSize: 15.0)]
+        let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15.0)]
 
         return NSMutableAttributedString(string: value.format(".2"), attributes: attrs)
     }
@@ -340,7 +340,7 @@ open class ScalePicker: UIView, SlidePickerDelegate {
             self.picker.updateCurrentProgress()
 
             if self.trackProgress {
-                UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
+                UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIView.AnimationOptions(), animations: { () -> Void in
 
                     self.progressView.alpha = 1.0
                     }, completion: nil)
@@ -451,7 +451,7 @@ open class ScalePicker: UIView, SlidePickerDelegate {
         }
     }
 
-    open func onDoubleTap(_ recognizer: UITapGestureRecognizer) {
+    @objc open func onDoubleTap(_ recognizer: UITapGestureRecognizer) {
         reset()
     }
 

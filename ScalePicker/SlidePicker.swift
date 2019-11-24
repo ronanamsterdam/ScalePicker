@@ -271,7 +271,7 @@ open class SlidePicker: UIView, UICollectionViewDelegateFlowLayout, UICollection
         reloadTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(SlidePicker.reloadCollectionView), userInfo: nil, repeats: false)
     }
 
-    func reloadCollectionView() {
+    @objc func reloadCollectionView() {
         reloadTimer?.invalidate()
 
         collectionView.reloadData()
@@ -559,19 +559,19 @@ public enum SlidePickerCellType {
 }
 
 open class SlidePickerCell: UICollectionViewCell {
-    open static var signWidth: CGFloat = {
+    public static var signWidth: CGFloat = {
         let sign = "-"
         let maximumTextSize = CGSize(width: 100, height: 100)
         let textString = sign as NSString
         let font = UIFont.systemFont(ofSize: 12.0)
 
         let rect = textString.boundingRect(with: maximumTextSize, options: .usesLineFragmentOrigin,
-                                                   attributes: [NSFontAttributeName: font], context: nil)
+                                           attributes: [NSAttributedString.Key.font: font], context: nil)
 
         return (rect.width / 2) + 1
     }()
 
-    open static let strokeWidth: CGFloat = 1.5
+    public static let strokeWidth: CGFloat = 1.5
 
     open var showTickLabels = true
     open var showPlusForPositiveValues = true

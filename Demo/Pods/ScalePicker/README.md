@@ -1,11 +1,9 @@
 <p align="center">
-    <img src="https://travis-ci.org/kronik/ScalePicker.svg?branch=master" />
     <img src="https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat" alt="Platform: iOS 8+" />
-    <img src="https://img.shields.io/cocoapods/v/ScalePicker.svg?style=flat" />
-    <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat" alt="Language: Swift 2.2" /></a>
+<img src="https://img.shields.io/cocoapods/v/ScalePicker.svg?style=flat" />
+    <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-swift2-f48041.svg?style=flat" alt="Language: Swift 2" /></a>
     <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
     <img src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" alt="License: MIT" />
-    <a href="https://twitter.com/dklimkin"><img src="http://img.shields.io/badge/contact-@dklimkin-blue.svg?style=flat"/></a>
 </p>
 
 # ScalePicker
@@ -36,23 +34,16 @@ CocoaPods is a dependency manager for Objective-C/Swift, which automates and sim
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'ScalePicker'
+pod 'ScalePicker', '~> 1.1.1'
 ```
 
 ### With Carthage
 
 Carthage is a lightweight dependency manager for Swift and Objective-C. It leverages CocoaTouch modules and is less invasive than CocoaPods. To install with carthage, follow the instruction on [Carthage](https://github.com/Carthage/Carthage/).
 
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
+#### Cartfile
 ```
-To integrate ScalePicker into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "kronik/ScalePicker"
+github "kronik/ScalePicker" ~> 1.1.1
 ```
 
 ## Usage
@@ -152,15 +143,6 @@ In addition to increase/decrease/reset actions ScaleView allows you to double ta
 ### More
 
 For more details try Xcode [Demo project](https://github.com/kronik/ScalePicker/blob/master/Demo)
-
-# Etc.
-
-* Contributions are very welcome.
-* Attribution is appreciated (let's spread the word!), but not mandatory.
-
-## Use it? Love/hate it?
-
-Tweet the author [@dklimkin](http://twitter.com/dklimkin), and check out Dmitry's portfolio: http://dmitry-klimkin.com
 
 ## License
 
